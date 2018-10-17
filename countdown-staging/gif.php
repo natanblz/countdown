@@ -25,7 +25,7 @@
 		
 		$interval = date_diff($future_date, $now);
 		
-		if($future_date < $now){
+		if($future_date <= $now){
 			// Open the first source image and add the text.
 			$image = imagecreatefrompng('images/countdown.png');
 			;
