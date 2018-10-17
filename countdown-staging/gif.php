@@ -18,7 +18,7 @@
 		'angle' => 0, // Angle of the text
 		'x-offset' => 7, // The larger the number the further the distance from the left hand side, 0 to align to the left.
 		'y-offset' => 30, // The vertical alignment, trial and error between 20 and 60.
-		'file' => __DIR__ . DIRECTORY_SEPARATOR . 'Futura.ttc', // Font path
+		'file' => __DIR__ . DIRECTORY_SEPARATOR . 'HelveticaNeue.otf', // Font path
 		'color' => imagecolorallocate($image, 55, 160, 130), // RGB Colour of the text
 	);
 	for($i = 0; $i <= 60; $i++){
