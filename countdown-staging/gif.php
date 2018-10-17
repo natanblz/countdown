@@ -1,8 +1,8 @@
 <?php
 	//Leave all this stuff as it is
 	date_default_timezone_set('America/Sao_Paulo;');
-	include 'GIFEncoder.class.php';
-	include 'php52-fix.php';
+	include '../commons/GIFEncoder.class.php';
+	include '../commons/php52-fix.php';
 	$time = $_GET['time'];
 	$future_date = new DateTime(date('r',strtotime($time)));
 	$time_now = time();
@@ -10,7 +10,7 @@
 	$frames = array();	
 	$delays = array();
 
-	$image = imagecreatefrompng('images/countdown.png');
+	$image = imagecreatefrompng('countdown.png');
 
 	$delay = 100;
 
