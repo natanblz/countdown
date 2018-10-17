@@ -1,6 +1,6 @@
 <?php
 	//Leave all this stuff as it is
-	date_default_timezone_set('America/Sao_Paulo;');
+	date_default_timezone_set('America/Sao_Paulo');
 	include '../commons/GIFEncoder.class.php';
 	include '../commons/php52-fix.php';
 	$time = $_GET['time'];
@@ -35,7 +35,7 @@
 			imagegif($image);
 			$frames[]=ob_get_contents();
 			$delays[]=$delay;
-			$loops = 1;
+			$loops = 0;
 			ob_end_clean();
 			break;
 		} else {
