@@ -21,27 +21,25 @@
 		'file' => __DIR__ . DIRECTORY_SEPARATOR . 'HelveticaNeue.otf', // Font path
 		'color' => imagecolorallocate($image, 55, 160, 130), // RGB Colour of the text
 	);
-	for($i = 0; $i <= 60; $i++){
+	for($i = 0; $i < 60; $i++){
 		
 		$interval = date_diff($future_date, $now);
 		
-		if($future_date <= $now){
+		if($future_date < $now){
 			// Open the first source image and add the text.
 			$image = imagecreatefrompng('images/countdown.png');
-			;
 			$text = $interval->format('00:00:00:00');
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
 			imagegif($image);
 			$frames[]=ob_get_contents();
 			$delays[]=$delay;
-			$loops = 0;
+			$loops = 1;
 			ob_end_clean();
 			break;
 		} else {
 			// Open the first source image and add the text.
 			$image = imagecreatefrompng('images/countdown.png');
-			;
 			$text = $interval->format('0%a %H %I %S');
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
