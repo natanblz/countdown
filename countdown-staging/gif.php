@@ -10,7 +10,7 @@
 	$frames = array();	
 	$delays = array();
 
-	$image = imagecreatefrompng('countdown.png');
+	$image = imagecreatefrompng('./countdown.png');
 
 	$delay = 100;
 
