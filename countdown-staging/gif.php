@@ -24,7 +24,7 @@
 		
 		$interval = date_diff($future_date, $now);
 		
-		if($future_date < $now){
+		if($now > $future_date){
 			$image = imagecreatefrompng('images/countdown.png');
 
 			$text = $interval->format('Promoção Encerrada');
@@ -38,7 +38,6 @@
 			$delays[]=$delay;
 
 			ob_end_clean();
-			break;
 		} else {
 			$image = imagecreatefrompng('images/countdown.png');
 
