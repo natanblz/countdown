@@ -43,7 +43,7 @@
 		} else {
 			$image = imagecreatefrompng('images/countdown.png');
 
-			$text = $interval->format('%a : %H : %I : %S');
+			$text = $interval->format('0%a : %H : %I : %S');
 
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
