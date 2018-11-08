@@ -36,7 +36,7 @@
 
 			$frames[]=ob_get_contents();
 			$delays[]=$delay;
-			$loops = 1;
+			$loops = 0;
 
 			ob_end_clean();
 			break;
@@ -54,7 +54,6 @@
 			$delays[]=$delay;
 			$loops = 0;
 			ob_end_clean();
-			break;
 		}
 		$now->modify('+1 second');
 	}
