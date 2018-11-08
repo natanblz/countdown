@@ -61,5 +61,5 @@
 	header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 	header( 'Cache-Control: post-check=0, pre-check=0', false );
 	header( 'Pragma: no-cache' );
-	$gif = new AnimatedGif($frames,$delays,0);
+	$gif = new AnimatedGif($frames,$delays,1);
 	$gif->display();
