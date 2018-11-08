@@ -36,7 +36,6 @@
 
 			$frames[]=ob_get_contents();
 			$delays[]=$delay;
-			$loops = 1;
 
 			ob_end_clean();
 			break;
@@ -52,7 +51,6 @@
 
 			$frames[]=ob_get_contents();
 			$delays[]=$delay;
-			$loops = 1;
 			ob_end_clean();
 		}
 		$now->modify('+1 second');
@@ -63,5 +61,5 @@
 	header( 'Cache-Control: no-store, no-cache, must-revalidate' );
 	header( 'Cache-Control: post-check=0, pre-check=0', false );
 	header( 'Pragma: no-cache' );
-	$gif = new AnimatedGif($frames,$delays,$loops);
+	$gif = new AnimatedGif($frames,$delays,0);
 	$gif->display();
