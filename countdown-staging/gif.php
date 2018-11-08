@@ -27,7 +27,7 @@
 		if($future_date < $now){
 			$image = imagecreatefrompng('images/countdown.png');
 
-			$text = $interval->format('00 : 00 : 00 : 00');
+			$text = $interval->format('Promoção Encerrada');
 
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
