@@ -43,7 +43,7 @@
 
 			$text = $interval->format('0%a : %H : %I : %S');
 
-			imagettftext ($image , $font['size'] , $font['angle'] , 20 , $font['y-offset'] , $font['color'] , $font['file'], $text );
+			imagettftext ($image , 40 , $font['angle'] , 20 , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
 
 			imagegif($image);
