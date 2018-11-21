@@ -14,8 +14,8 @@
 	$font = array(
 		'size' => 30, // Font size, in pts usually.
 		'angle' => 0, // Angle of the text
-		'x-offset' => 40, // The larger the number the further the distance from the left hand side, 0 to align to the left.
-		'y-offset' => 100, // The vertical alignment, trial and error between 20 and 60.
+		'x-offset' => 35, // The larger the number the further the distance from the left hand side, 0 to align to the left.
+		'y-offset' => 60, // The vertical alignment, trial and error between 20 and 60.
 		'file' => __DIR__ . DIRECTORY_SEPARATOR . 'HelveticaNeue.otf', // Font path
 		'color' => imagecolorallocate($image, 255, 108, 0), // RGB Colour of the text
 	);
